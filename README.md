@@ -1,4 +1,4 @@
-# Pink Ribbon Classifier
+# Projekt klasyfikacji nowotworów piersi z naciskiem na minimalizację błędów False Negative (High Recall)
 
 <img width="3164" height="1894" alt="image" src="https://github.com/user-attachments/assets/dc2069aa-2f8b-4310-912a-a2646103aadd" />
 
