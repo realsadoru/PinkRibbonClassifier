@@ -1,6 +1,6 @@
 # Projekt klasyfikacji nowotworów piersi z naciskiem na minimalizację błędów False Negative (High Recall)
 
-<img width="3164" height="1894" alt="image" src="https://github.com/user-attachments/assets/dc2069aa-2f8b-4310-912a-a2646103aadd" />
+<img width="1582" height="947" alt="image" src="https://github.com/user-attachments/assets/adeb7952-2408-4e58-bc28-029d1adcb5d6" />
 
 <h2 align="left">Wybór zbioru danych</h2>
 
@@ -58,7 +58,7 @@ Dlaczego wybrałem akurat te algorytmy? SVM szuka optymlanej granicy między kla
 
 Zwycięskim modelem okazał się SVM, osiągając wynik _Recall_ równy *0.976*. Nie było to dużym zaskoczeniem ze względu na jego wcześniej wspomnianą renomę. Dodatkowo sprawdziłem go na odłożonym zbiorze 113 pacjentów, na którym uzyskał wynik *0.956* dla _Precision_ i *0.956* dla _Recall_. Poniżej znajduje się zrzut ekrany z _Confusion Matrix_.
 
-<img width="862" height="480" alt="image" src="https://github.com/user-attachments/assets/07fc236c-e5bc-4db5-83c5-17d2bd98c572" />
+<img width="862" height="480" alt="image" src="https://github.com/user-attachments/assets/f0e044d6-86ac-440d-a569-ecf3b67eb155" />
 
 Można więc stwierdzić, że model spełnia wymagania. Na 42 chorych pacjentów w zbiorze testowym, model przeoczył tylko 2 osoby (FN=2), co przy tak małym zbiorze jest wynikiem bardzo dobrym.
 
