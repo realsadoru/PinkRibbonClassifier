@@ -1,6 +1,6 @@
 # Projekt klasyfikacji nowotworów piersi z naciskiem na minimalizację błędów False Negative (High Recall)
 
-<img width="1582" height="947" alt="image" src="https://github.com/user-attachments/assets/adeb7952-2408-4e58-bc28-029d1adcb5d6" />
+<img width="1580" height="945" alt="image" src="https://github.com/user-attachments/assets/9f55f13b-8ca3-45e3-93ca-2e0badfe7da3" />
 
 <h2 align="left">Wybór zbioru danych</h2>
 
@@ -56,9 +56,11 @@ Dlaczego wybrałem akurat te algorytmy? SVM szuka optymlanej granicy między kla
 
 <img width="996" height="674" alt="image" src="https://github.com/user-attachments/assets/76c7ccb0-2aa1-4ecd-87ec-b3ddab29f159" />
 
-Zwycięskim modelem okazał się SVM, osiągając wynik _Recall_ równy *0.976*. Nie było to dużym zaskoczeniem ze względu na jego wcześniej wspomnianą renomę. Dodatkowo sprawdziłem go na odłożonym zbiorze 113 pacjentów, na którym uzyskał wynik *0.956* dla _Precision_ i *0.956* dla _Recall_. Poniżej znajduje się zrzut ekrany z _Confusion Matrix_.
+Zwycięskim modelem okazał się SVM, osiągając wynik _Recall_ równy *0.976*. Nie było to dużym zaskoczeniem ze względu na jego wcześniej wspomnianą renomę. Dodatkowo sprawdziłem go na odłożonym zbiorze 113 pacjentów, na którym uzyskał wynik *0.930* dla _Precision_ i *0.952* dla _Recall_. Poniżej znajduje się zrzut ekranu z Test and Score na odłożonym zbiorze i wyniki z _Confusion Matrix_.
 
-<img width="862" height="480" alt="image" src="https://github.com/user-attachments/assets/f0e044d6-86ac-440d-a569-ecf3b67eb155" />
+<img width="1964" height="1334" alt="image" src="https://github.com/user-attachments/assets/6e9750a7-5e93-404c-b86e-939412ff8aa8" />
+
+<img width="1724" height="960" alt="image" src="https://github.com/user-attachments/assets/a3c6d27c-7d58-4311-a1f1-25261d6b8c9f" />
 
 Można więc stwierdzić, że model spełnia wymagania. Na 42 chorych pacjentów w zbiorze testowym, model przeoczył tylko 2 osoby (FN=2), co przy tak małym zbiorze jest wynikiem bardzo dobrym.
 
@@ -68,4 +70,4 @@ Można więc stwierdzić, że model spełnia wymagania. Na 42 chorych pacjentów
 
 ###
 
-Algorytm SVM okazał się najbardziej efektywny w kontekście postawionego celu (maksymalizacja Recall). Dzięki zastosowaniu jądra RBF oraz optymalizacji parametrów model osiągnął czułość na poziomie *0.976* w walidacji krzyżowej oraz *0.956* na zbiorze testowym. Oznacza to, że model jest stabilny i nie uległ overfittingowi. Głównym wyzwaniem był dobór parametrów tak, aby podnosząc _Recall_, nie zdewastować całkowicie metryki _Precision_. Udało się zachować _Precision_ na poziomie powyżej *0.95*, co oznacza, że model nie generuje nadmiernej liczby fałszywych alarmów. Macierz pomyłek wykazała jedynie 2 przypadki False Negative na 113 testowanych rekordów. W diagnostyce onkologicznej taki wynik jest bardzo satysfakcjonujący, gdyż minimalizuje ryzyko zaniechania leczenia u osoby faktycznie chorej. W przyszłości wyniki można by próbować poprawić poprzez zwiększenie zbioru danych o przypadki bardziej niejednoznaczne, co mogłoby pozwolić modelowi na jeszcze lepszą generalizację.
+Algorytm SVM okazał się najbardziej efektywny w kontekście postawionego celu (maksymalizacja Recall). Dzięki zastosowaniu jądra RBF oraz optymalizacji parametrów model osiągnął czułość na poziomie *0.976* w walidacji krzyżowej oraz *0.952* na zbiorze testowym. Oznacza to, że model jest stabilny i nie uległ overfittingowi. Głównym wyzwaniem był dobór parametrów tak, aby podnosząc _Recall_, nie zdewastować całkowicie metryki _Precision_. Udało się zachować _Precision_ na poziomie powyżej *0.95*, co oznacza, że model nie generuje nadmiernej liczby fałszywych alarmów. Macierz pomyłek wykazała jedynie 2 przypadki False Negative na 113 testowanych rekordów. W diagnostyce onkologicznej taki wynik jest bardzo satysfakcjonujący, gdyż minimalizuje ryzyko zaniechania leczenia u osoby faktycznie chorej. W przyszłości wyniki można by próbować poprawić poprzez zwiększenie zbioru danych o przypadki bardziej niejednoznaczne, co mogłoby pozwolić modelowi na jeszcze lepszą generalizację.
